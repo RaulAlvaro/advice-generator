@@ -1,0 +1,80 @@
+@import url(https://fonts.google.com/specimen/Manrope);
+
+$small: 670px;
+
+.container {
+  align-items: center;
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  font-family: Manrope,'Roboto';
+  font-weight: bold;
+  height: 100vh;
+  justify-content: center;
+
+  .container-text {
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 12px;
+    height: 18rem;
+    padding: 2rem 0;
+    position: relative;
+    text-align: center;
+    width: 28rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: $small) {
+      height: 20rem;
+      padding: 1rem;
+      width: 18rem;
+    }
+
+    .title-style {
+      color: hsl(150, 100%, 66%);
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .message-style {
+      color: hsl(193, 38%, 86%);
+      font-size: 28px;
+    }
+
+    .divider-mobile {
+      display: none;
+      @media screen and (max-width: $small) {
+        display: inline;
+      }
+    }
+
+    .divider-desktop {
+      display: inline;
+      @media screen and (max-width: $small) {
+        display: none;
+      }
+    }
+
+    .button {
+      align-items: center;
+      background-color: hsl(150, 100%, 66%);
+      border-radius: 50%;
+      bottom: -40px;
+      cursor: pointer;
+      display: flex;
+      height: 80px;
+      justify-content: center;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%);
+      width: 80px;
+    }
+
+    .button:hover {
+      box-shadow: 0px -1px 60px 12px rgba(82,255,168,0.69);
+      -webkit-box-shadow: 0px -1px 60px 12px rgba(82,255,168,0.69);
+      -moz-box-shadow: 0px -1px 60px 12px rgba(82,255,168,0.69);
+    }
+  }
+}
